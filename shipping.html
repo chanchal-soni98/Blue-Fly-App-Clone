@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            color: #545454;
+            background: white;
+            margin-bottom: -120px;
+            font-size: .8em;
+            letter-spacing: .2em;
+            margin-top: 50px;
+        }
+
+        #tag1>img {
+            text-align: center;
+            margin-left: 200px;
+        }
+
+        #main1 {
+
+            display: flex;
+            height: 600px;
+
+
+        }
+
+        #left1 {
+
+            height: 200%;
+            width: 50%;
+        }
+
+        #right1 {
+
+            height: 200%;
+            width: 50%;
+        }
+
+        #ptag1 {
+            display: flex;
+            margin-left: 170px;
+            gap: 10px;
+        }
+
+        #ptag1>p {
+
+            font-size: 20px;
+            color: black;
+
+        }
+
+        #ptag1>a {
+
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        #raj1 {
+            width: 80%;
+            height: 40px;
+        }
+
+        #ramu1 {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 120px;
+            width: 70%;
+        }
+
+        #ramu1 a {
+            text-decoration: none;
+            color: black;
+            
+        }
+
+        #back1 {
+            color: white;
+            background-color: black;
+            height: 45px;
+            font-size: .9em;
+            letter-spacing: 0.1rem;
+            margin-right: 20px;
+            margin-top: 15px;
+            /* margin-left: -5px; */
+        }
+
+        #raju1 {
+            width: 65%;
+            margin-left: 120px;
+            gap: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #raju1 p{
+            margin-left: 3px;
+            font-size: 10px;
+        }
+
+        #snow1 {
+            color: white;
+            background-color: #545454;
+            height: 50px;
+            width: 80px;
+            border: none;
+        }
+
+        #peace1 {
+            height: 45px;
+            width: 50%;
+            font-size: 20px;
+            letter-spacing: 0px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        #contact {
+            display: flex;
+            gap: 15px;
+            border: 1px solid black;
+            height: 44px;
+            width: 480px;
+            padding-left: 10px;
+            /* border-right: none; */
+
+        }
+
+        #ship {
+            padding-left: 120px;
+
+        }
+
+        /* #contact>p:nth-child(3){
+            border: 1px solid black;
+            height: 24px;
+             margin-top: -1px; 
+            padding: 10px;
+            margin-left: -14px;
+            margin-top: -1px;
+            border-left: none;
+       } */
+
+
+
+        /* #contact>button{
+            border: none;
+           
+            background-color: white;
+            border: 1px solid black;
+            border-left: none;
+        } */
+
+        #hitwomen{
+            margin-top: 20px;
+            margin-left: 160px;
+            color: black;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main1">
+        <div id="left1">
+
+            <div id="tag1">
+                <img src="https://cdn.shopify.com/s/files/1/0248/3473/6191/files/BLUEFLY-LOGO-11-20.png?197908" alt="">
+            </div>
+
+
+            <div id="ptag1">
+                <a href="./cart.html">
+                    <p>cart </p>
+                </a>
+                <a href="./payment.html">
+                    <p>Information </p>
+                </a>
+                <a href="./shipping.html">
+                    <p>Shipping </p>
+                </a>
+                <a href="./success.html">
+                    <p>Payment </p>
+                </a>
+
+            </div>
+
+            <div id="ship">
+                <div id="contact">
+                    <p> Contact</p>
+                    <p id="mail"> </p>
+                    <p id="change">Change</p>
+                </div>
+                <br> <br>
+                <div id="contact">
+                    <p>Contact</p>
+                    <p id="add"></p>
+                    <p id="change1">Change</p>
+                </div>
+
+            </div>
+
+
+            <div id="ramu1">
+                <a href="./payment.html">
+                    <h5>Return to information</h5>
+                </a>
+                <button id="back1">Continue to Payment</button>
+            </div>
+
+            <div id="raju1">
+                <p>Refund Policy</p>
+                <p>Shipping Policy</p>
+                <p>Privacy policy</p>
+                <p>Terms of services</p>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div id="right1">
+
+            <div id="hitman">
+
+            </div>
+
+            <div id="cart1">
+                <input type="text" id="peace1" placeholder="Gift card or discount code">
+                <button id="snow1">Apply</button>
+            </div>
+
+            <div id="hitwomen"></div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>
+
+<script src="shipping.js"></script>
+<script>
+    let hitwomen = document.getElementById("hitwomen");
+    function hitwomen_payment(){
+        let data = JSON.parse(localStorage.getItem("total"));
+        hitwomen.append("Sub Total: ","$",data)
+    }
+    hitwomen_payment()
+</script>
